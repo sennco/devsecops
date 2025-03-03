@@ -1,3 +1,12 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", serif;
+}
 .App {
   text-align: center;
 }
@@ -13,7 +22,7 @@
   }
 }
 
-.App-header {
+.card {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -22,6 +31,23 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.card button{
+  background-color: #282c34;
+  color: white;
+  border: solid 1px white;
+  padding: 12px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btns{
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
 }
 
 .App-link {
