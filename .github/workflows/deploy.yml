@@ -3,29 +3,23 @@ name: Deploy para Vercel
 on:
   push:
     branches:
-      
-main
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      
-name: Clonar repositório
-      uses: actions/checkout@v3
+      - name: Clonar repositório
+        uses: actions/checkout@v3
 
-      
-name: Instalar dependências
-      run: npm install
+      - name: Instalar dependências
+        run: npm install
 
-      
-name: Rodar testes
-      run: npm test
+      - name: Rodar testes
+        run: npm test
 
-      
-name: Build do projeto
-      run: npm run build
+      - name: Build do projeto
+        run: npm run build
 
-      
-name: Deploy para Vercel
-      run: npx vercel --prod --token=${{ secrets.VERCEL_TOKEN }}
+      - name: Deploy para Vercel
+        run: npx vercel --prod --token=${{ secrets.VERCEL_TOKEN }}
