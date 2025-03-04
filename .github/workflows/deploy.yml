@@ -21,11 +21,6 @@ jobs:
       - name: Build do projeto
         run: npm run build
 
-      - name: Verificar Token
-        run: echo "Token Length: ${#VERCEL_TOKEN}"
-        env:
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-
       - name: Deploy para Vercel
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
